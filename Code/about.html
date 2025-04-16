@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <title>whyVi.me</title>
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="navbar">
+            <div class="logo">
+              <a href="index.html">VINIT</a>
+            </div>
+      
+            <div class="nav-center">
+              <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li>
+                  <a href="/assets/VINIT_CV.pdf" download>RESUME</a>
+                </li>              
+                <li><a href="about.html">CONTACT</a></li>
+              </ul>
+            </div>
+      
+            <div class="linkedin">
+              <a href="www.linkedin.com/in/m-n-vinit-8443a9195" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+      
+            <div class="menu-toggle" id="menu-toggle">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="about">
+        <div class="intro">
+            <img src="/assets/Profile 2.webp" alt="Profile">
+            <div class="text">
+                <h1>Product & Graphic <br>
+                    Designer.</h1>
+                <p>I’m Vinit, your friendly neighborhood 
+                    designer <br>
+                    turning chaos into clean UI.</p>
+            </div>
+        </div>
+        <div class="bio">
+            <p>I started my design journey in graphic design and spent over 3 years crafting visual stories, branding, and marketing creatives. Along the way, I’ve worked on 100+ campaigns that helped brands grow and connect with their audience. <br>
+
+                <br>Over time, I found myself drawn to solving deeper problems, which led me into the world of UX and product design. Now, I spend my time understanding users, simplifying flows, building wireframes, and making sure every screen not only looks good but works beautifully. <br>
+                
+                <br>I’m big on collaboration I genuinely enjoy working with developers, product managers, and other designers to build things that are not just functional, but meaningful. I believe great design is a team sport, and the best work happens when everyone’s ideas are heard.</p>
+        </div>
+      </div>
+  <script src="script.js" ></script>
+</body>
+<footer style="display: flex; justify-content: center; align-items: center; margin-bottom: 100px; flex-direction: column;">
+  <div class="hi-wrapper">
+    <a href="mailto:mnvinit590@gmail.com" class="hi" id="contact">Say Hi!</a>
+    <span class="mail-id">mnvinit590@gmail.com</span>
+    <img src="/assets/Union.svg" class="uni" alt="icon" />
+  </div>
+  <div class="call">
+    <p>Call at</p>
+    <div class="no" id="phoneNumber">
+      <span class="digit">X</span>
+      <span class="digit">X</span>
+      <span class="digit">X</span>
+      <span class="digit">X</span>
+      <span class="digit">X</span>
+      <span class="digit">X</span>
+      <span class="digit">X</span>
+      <span class="digit">X</span>
+      <span class="digit">X</span>
+      <span class="digit">X</span>
+      <span class="digit">X</span>
+      <span class="digit">X</span>
+    </div>
+  </div>
+  <div class="reveal">
+    <p>Tap</p>
+    <span>R</span>
+    <p>To Reveal</p>
+  </div>
+  <div class="top">
+    <a href="index.html" class="top">Back To Top</a><img src="/assets/Slider Arrow.svg" alt="">
+  </div>
+  <div class="copy">
+    <p style="text-align: center;" >Designed & Developed <br> @ bit_pix3l</p>
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/m-n-vinit-8443a9195" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/In.svg" alt="LinkedIn">
+      </a>
+      <a href="https://dribbble.com/bitpix3l" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/Dr.svg" alt="Dribbble">
+      </a>
+      <a href="https://www.behance.net/VinitDesign_Co" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/Be.svg" alt="Behance">
+      </a>
+      
+    </div>
+    <p style="text-align: center;">© 2024 - 25 All right<br>Reserved</p>
+  </div>
+</footer>
+<script>
+  const actualDigits = ['+', '91', '7', '3', '4', '9', '6', '3', '9', '7', '1', '7'];
+  const digitSpans = document.querySelectorAll('.no .digit');
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'r' || e.key === 'R') {
+      // Reveal with animation
+      digitSpans.forEach((span, i) => {
+        span.textContent = actualDigits[i];
+        span.classList.remove('hidden');
+      });
+
+      // Hide again after delay
+      setTimeout(() => {
+        digitSpans.forEach((span) => {
+          span.textContent = 'X';
+          span.classList.add('hidden');
+        });
+      }, 3000);
+    }
+  });
+  // On initial load, hide digits
+  digitSpans.forEach(span => span.classList.add('hidden'));
+</script>
+</html>
